@@ -4,7 +4,7 @@ These are notes taken while setting up my desktop's install of Fedora Linux 36 (
 ## Installing various staple programs
 Install the following:
 ```bash
-sudo dnf install vim htop
+sudo dnf install vim htop plank gnome-tweaks
 ```
 
 ## DejaVu fonts
