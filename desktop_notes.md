@@ -20,6 +20,7 @@ First, you'll need to enable the Nvidia driver repository. I like to do this via
 You can then install the drivers:
 ```bash
 sudo dnf install akmod-nvidia
+sudo dnf install xorg-x11-drv-nvidia-cuda
 ```
 
 After a reboot, remove the `nouveau` drivers for good measure:
