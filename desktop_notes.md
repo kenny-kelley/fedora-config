@@ -58,3 +58,18 @@ Run this stuff:
 ```bash
 flatpak install spotify
 ```
+
+## Fixing a humming/hissing noise when no audio is playing
+Create a file in `/etc/modprobe.d/`:
+```bash
+sudo vim /etc/modprobe.d/snd_hda_intel_power_save.conf # Make your edits
+```
+
+Include the following content:
+```bash
+options snd_hda_intel power_save=0 power_save_controller=N
+```
+
+The default permissions from `sudo vim` should be fine.
+
+Reboot the machine.
