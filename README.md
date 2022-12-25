@@ -57,14 +57,6 @@ I would reboot again too, out of paranoia.
 Further help can be found here:
 - https://rpmfusion.org/Howto/NVIDIA
 
-## Installing Discord
-To install Discord, run:
-```bash
-sudo dnf install discord
-```
-
-Alternatively, you could probably find it in *GNOME Software*.
-
 ## Installing Steam
 To install Steam, run:
 ```bash
@@ -74,6 +66,14 @@ sudo dnf install steam
 Alternatively, you could probably find it in *GNOME Software*
 
 It's possible that `dnf` won't find this package. If that's the case, you may need to somehow tell `dnf` to look for 32-bit packages (the *i686* architecture).
+
+## Installing Discord
+To install Discord, run:
+```bash
+sudo dnf install discord
+```
+
+Alternatively, you could probably find it in *GNOME Software*.
 
 ## Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
