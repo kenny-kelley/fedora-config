@@ -15,7 +15,7 @@ These are things we're going to want right off the bat.
 
 Install the following:
 ```bash
-sudo dnf install vim htop plank gnome-tweaks
+sudo dnf install vim tmux htop neofetch gnome-tweaks plank
 ```
 
 ## Adding the RPM Fusion nonfree repository
@@ -31,7 +31,7 @@ After that finishes, we should update our local metadata cache:
 sudo dnf makecache
 ```
 
-Now we should be able to install the Nvidia drivers, Steam, and Discord.
+Now we should be able to install the properietary Nvidia drivers, Steam, and Discord.
 
 See these links for additional help:
 - https://rpmfusion.org/Configuration
