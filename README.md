@@ -1,14 +1,14 @@
 # How to set up Fedora Linux
 These are notes taken while setting up my desktop's install of Fedora Linux 37 (Workstation Edition).
 
-## Initial setup
-After getting signed in, be sure to update any packages via `dnf`:
+## The first thing you should do
+Be sure to upgrade any packages via `dnf`:
 ```bash
 sudo dnf upgrade --refresh
 sudo dnf autoremove
 ```
 
-Doing this pair of commands throughout your setup process could be a good idea. (At least do it once more at the end.)
+Doing this pair of commands throughout your setup process could be a good idea. Be sure to do it at least once more at the very end.
 
 ## Installing various staple programs
 These are things we're going to want right off the bat.
@@ -18,7 +18,7 @@ Install the following:
 sudo dnf install vim htop plank gnome-tweaks
 ```
 
-## Enabling the RPM Fusion nonfree repository
+## Adding the RPM Fusion nonfree repository
 The RPM Fusion repositories contain some software that we'll need or want. In particular we need to add their *nonfree* repository.
 
 We can add RPM Fusion nonfree repository by installing this package:
@@ -37,7 +37,7 @@ See these links for additional help:
 - https://rpmfusion.org/Configuration
 - https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
 
-## Installing Nvidia graphics drivers
+## Installing the properietary Nvidia drivers
 Install these packages via `dnf`:
 ```bash
 sudo dnf install akmod-nvidia
@@ -71,11 +71,11 @@ To install Steam, run:
 sudo dnf install steam
 ```
 
-It's possible that `dnf` won't find this package. If that's the case, you may need to somehow enable the *i686* (32-bit) architecture.
+Alternatively, you could probably find it in *GNOME Software*
 
-Alternatively, you could probably find it in *GNOME Software*.
+It's possible that `dnf` won't find this package. If that's the case, you may need to somehow tell `dnf` to look for 32-bit packages (the *i686* architecture).
 
-## DejaVu fonts
+## Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
 ```bash
 sudo dnf install dejavu-fonts-all
@@ -83,17 +83,17 @@ fc-cache -v
 ```
 
 ## Installing Google Chrome
-First, you'll need to enable the Google Chrome repository. We can do that with `dnf config-manager`.
+You'll need to enable the Google Chrome repository that Workstation Edition ships with. We can do that with `dnf config-manager`.
 
-So run:
+To install Google Chrome, run:
 ```bash
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf makecache
 sudo dnf install google-chrome-stable
 ```
 
-## Enabling the Flathub repository for Flatpak
-To enable the Flathub repository for Flatpak, run:
+## Adding the Flathub repository for Flatpak
+To add the Flathub repository for Flatpak, run:
 ```bash
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
