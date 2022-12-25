@@ -10,14 +10,6 @@ sudo dnf autoremove
 
 Doing this pair of commands throughout your setup process could be a good idea. Be sure to do it at least once more at the very end.
 
-## Installing various staple programs
-These are things we're going to want right off the bat.
-
-Install the following:
-```bash
-sudo dnf install vim tmux htop neofetch gnome-tweaks plank
-```
-
 ## Adding the RPM Fusion nonfree repository
 The RPM Fusion repositories contain some software that we'll need or want. In particular we need to add their *nonfree* repository.
 
@@ -74,6 +66,14 @@ sudo dnf install discord
 ```
 
 Alternatively, you could probably find it in *GNOME Software*.
+
+## Installing various staple programs
+These are programs that I prefer to have around.
+
+To install them, run:
+```bash
+sudo dnf install vim tmux htop neofetch gnome-tweaks plank
+```
 
 ## Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
