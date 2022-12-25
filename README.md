@@ -55,7 +55,7 @@ To install Steam, run:
 sudo dnf install steam
 ```
 
-Alternatively, you could probably find it in *GNOME Software*
+Alternatively, you could probably find it in *GNOME Software*.
 
 It's possible that `dnf` won't find this package. If that's the case, you may need to somehow tell `dnf` to look for 32-bit packages (the *i686* architecture).
 
