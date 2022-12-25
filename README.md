@@ -1,5 +1,5 @@
-# Fedora setup notes for desktop PC
-These are notes taken while setting up my desktop's install of Fedora Linux 36 (Workstation Edition). 
+# How to set up Fedora Linux
+These are notes taken while setting up my desktop's install of Fedora Linux 37 (Workstation Edition).
 
 ## Initial setup
 After getting signed in, be sure to update any packages via `dnf`:
@@ -18,13 +18,6 @@ Install the following:
 sudo dnf install vim htop plank gnome-tweaks
 ```
 
-## DejaVu fonts
-You can install the DejaVu fonts (and refresh the font cache) like this:
-```bash
-sudo dnf install dejavu-fonts-all
-fc-cache -v
-```
-
 ## Enabling the RPM Fusion nonfree repository
 The RPM Fusion repositories contain some software that we'll need or want. In particular we need to add their *nonfree* repository.
 
@@ -38,19 +31,11 @@ After that finishes, we should update our local metadata cache:
 sudo dnf makecache
 ```
 
-Now we should be able to install the Nvidia drivers and Discord.
+Now we should be able to install the Nvidia drivers, Steam, and Discord.
 
 See these links for additional help:
-- https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
 - https://rpmfusion.org/Configuration
-
-### About Third-Party Repositories
-It might be worth noting that Fedora has a "Third-Party Repositories" feature than can be managed via the GNOME `Software` GUI package manager and `dnf config-manager`.
-
-Here are Fedora's docs on them:
-- https://docs.fedoraproject.org/en-US/workstation-working-group/third-party-repos/
-
-We'll use this mechanism for a few things, but not the RPM Fusion nonfree repo.
+- https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
 
 ## Installing Nvidia graphics drivers
 Install these packages via `dnf`:
@@ -59,15 +44,43 @@ sudo dnf install akmod-nvidia
 sudo dnf install xorg-x11-drv-nvidia-cuda
 ```
 
-These should come out of the `rpmfusion-nonfree-updates` repository.
+The `xorg-x11-drv-nvidia-cuda` package, which includes CUDA and some video encoder support, is technically optional, but I recommend it.
 
-After a reboot, remove the `nouveau` drivers for good measure:
+After a reboot, remove the *nouveau* drivers for good measure:
 ```bash
 sudo dnf remove xorg-x11-drv-nouveau
 sudo dnf autoremove
 ```
 
 I would reboot again too, out of paranoia.
+
+Further help can be found here:
+- https://rpmfusion.org/Howto/NVIDIA
+
+## Installing Discord
+To install Discord, run:
+```bash
+sudo dnf install discord
+```
+
+Alternatively, you could probably find it in *GNOME Software*.
+
+## Installing Steam
+To install Steam, run:
+```bash
+sudo dnf install steam
+```
+
+It's possible that `dnf` won't find this package. If that's the case, you may need to somehow enable the *i686* (32-bit) architecture.
+
+Alternatively, you could probably find it in *GNOME Software*.
+
+## DejaVu fonts
+You can install the DejaVu fonts pack (and refresh the font cache) like this:
+```bash
+sudo dnf install dejavu-fonts-all
+fc-cache -v
+```
 
 ## Installing Google Chrome
 First, you'll need to enable the Google Chrome repository. We can do that with `dnf config-manager`.
@@ -79,34 +92,32 @@ sudo dnf makecache
 sudo dnf install google-chrome-stable
 ```
 
-## Installing Steam
-Since Steam isn't in the normal RPM Fusion nonfree repo, we'll have to add it separately with `dnf config-manager`.
-
-So run:
-```bash
-sudo dnf config-manager --set-enabled rpmfusion-nonfree-steam
-sudo dnf makecache
-sudo dnf install steam
-```
-
-## Installing Discord
-Run:
-```bash
-sudo dnf install discord
-```
-
-This should come out of the `rpmfusion-nonfree-updates` repository.
-
-## Installing Spotify
-Run this stuff:
+## Enabling the Flathub repository for Flatpak
+To enable the Flathub repository for Flatpak, run:
 ```bash
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+Further help can be found here:
+- https://flatpak.org/setup/Fedora
+
+## Installing Spotify
+To install Spotify, run:
+```bash
 sudo flatpak install flathub com.spotify.Client
 ```
 
 Further help can be found here:
-- https://docs.fedoraproject.org/en-US/quick-docs/installing-spotify/
 - https://flathub.org/apps/details/com.spotify.Client
+
+## Installing Signal
+To install Signal, run:
+```bash
+sudo flatpak install flathub org.signal.Signal
+```
+
+Further help can be found here:
+- https://flathub.org/apps/details/org.signal.Signal
 
 ## Fixing a humming/hissing noise when no audio is playing
 Create a file in `/etc/modprobe.d/`:
@@ -115,7 +126,7 @@ sudo vim /etc/modprobe.d/snd_hda_intel_power_save.conf # Make your edits
 ```
 
 Include the following content:
-```bash
+```
 options snd_hda_intel power_save=0 power_save_controller=N
 ```
 
