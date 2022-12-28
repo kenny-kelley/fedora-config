@@ -75,6 +75,8 @@ To install them, run:
 sudo dnf install vim tmux htop neofetch gnome-tweaks plank
 ```
 
+*Plank* is a macOS-like dock. I always add it to the Startup Applications list in *GNOME Tweaks*.
+
 ## Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
 ```bash
