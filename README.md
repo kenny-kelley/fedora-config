@@ -13,7 +13,7 @@ Doing this pair of commands throughout your setup process could be a good idea. 
 ## Adding the RPM Fusion nonfree repository
 The RPM Fusion repositories contain some software that we'll need or want. In particular we need to add their *nonfree* repository.
 
-We can add RPM Fusion nonfree repository by installing this package:
+We can add the RPM Fusion nonfree repository by installing this package:
 ```bash
 sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
