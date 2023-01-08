@@ -95,9 +95,10 @@ sudo dnf install google-chrome-stable
 ```
 
 ## Adding the Flathub repository for Flatpak
-To add the Flathub repository for Flatpak, run:
+To add and enable the Flathub repository for Flatpak, run:
 ```bash
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-modify --enable flathub
 ```
 
 Further help can be found here:
