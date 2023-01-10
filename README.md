@@ -122,6 +122,16 @@ sudo flatpak install flathub org.signal.Signal
 Further help can be found here:
 - https://flathub.org/apps/details/org.signal.Signal
 
+## Disabling the GRUB hidden menu feature
+To disable the GRUB hidden menu feature, run:
+```bash
+sudo grub2-editenv - unset menu_auto_hide
+```
+
+Further help can be found here:
+- https://fedoraproject.org/wiki/Changes/HiddenGrubMenu
+- https://hansdegoede.livejournal.com/19081.html
+
 ## Fixing a humming/hissing noise when no audio is playing
 Create a file in `/etc/modprobe.d/`:
 ```bash
