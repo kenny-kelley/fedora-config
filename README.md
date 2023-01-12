@@ -10,12 +10,14 @@ sudo dnf autoremove
 
 Doing this pair of commands throughout your setup process could be a good idea. Be sure to do it at least once more at the very end.
 
-## Adding the RPM Fusion nonfree repository
-The RPM Fusion repositories contain some software that we'll need or want. In particular we need to add their *nonfree* repository.
+## Adding the RPM Fusion repositories
+The RPM Fusion repositories contain some software that we'll need or want.
 
-We can add the RPM Fusion nonfree repository by installing this package:
+VLC, for example, is in the *free* repository. While the properietary Nvidia drivers, Steam, and Discord come out of the *nonfree* repository.
+
+We can add the RPM Fusion free and nonfree repositories by installing these packages:
 ```bash
-sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
 After that finishes, we should update our local metadata cache:
@@ -23,7 +25,8 @@ After that finishes, we should update our local metadata cache:
 sudo dnf makecache
 ```
 
-Now we should be able to install the properietary Nvidia drivers, Steam, and Discord.
+As you install packages out of these repositories for the first time, you'll be prompted to verify the public key fingerprint. You can view those here:
+- https://rpmfusion.org/keys
 
 See these links for additional help:
 - https://rpmfusion.org/Configuration
@@ -93,6 +96,19 @@ sudo dnf config-manager --set-enabled google-chrome
 sudo dnf makecache
 sudo dnf install google-chrome-stable
 ```
+
+## Installing VLC
+This will be coming out of the RPM Fusion free repository.
+
+To install VLC, run:
+```
+sudo dnf install vlc
+```
+
+It'll have quite a few dependencies, so that's why I've included it separately.
+
+Further help can be found here:
+- https://www.videolan.org/vlc/download-fedora.html
 
 ## Adding the Flathub repository for Flatpak
 To add and enable the Flathub repository for Flatpak, run:
