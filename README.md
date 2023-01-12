@@ -1,14 +1,35 @@
 # How to set up Fedora Linux
 These are notes taken while setting up my desktop's install of Fedora Linux 37 (Workstation Edition).
 
-## The first thing you should do
-Be sure to upgrade any packages via `dnf`:
+## Updating software
+
+### Upgrading `dnf` packages
+To upgrade `dnf` packages (and remove any unused dependencies), run:
 ```bash
 sudo dnf upgrade --refresh
 sudo dnf autoremove
 ```
 
-Doing this pair of commands throughout your setup process could be a good idea. Be sure to do it at least once more at the very end.
+### Updating Flatpak applications and dependencies
+To update Flatpak applications and dependencies (for the system and the current user), run:
+```bash
+sudo flatpak update
+sudo flatpak uninstall --unused
+flatpak update
+flatpak uninstall --unused
+```
+
+### Updating device firmware
+To update device firmware, run:
+```bash
+fwupdmgr refresh --force
+fwupdmgr update
+```
+
+It's worth noting that, while not all that many devices are really supported via `fwupd`, it's worth running every once and a while (especially on newer systems).
+
+Further help can be found here:
+- https://wiki.archlinux.org/title/fwupd
 
 ## Adding software repositories
 
@@ -67,7 +88,7 @@ I would reboot again too, out of paranoia.
 Further help can be found here:
 - https://rpmfusion.org/Howto/NVIDIA
 
-## Installing other packages
+## Installing new software
 
 ### Installing various staple programs
 These are programs that I prefer to have around.
