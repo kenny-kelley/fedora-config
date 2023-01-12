@@ -135,6 +135,10 @@ sudo dnf install discord
 
 Alternatively, you could probably find it in *GNOME Software*.
 
+### Installing Visual Studio Code
+Just see this page for the most up to date way to install VS Code:
+- https://code.visualstudio.com/docs/setup/linux
+
 ### Installing VLC
 This will be coming out of the RPM Fusion free repository.
 
