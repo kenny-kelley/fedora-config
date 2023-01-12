@@ -51,6 +51,15 @@ sudo dnf makecache
 As you install packages out of these repositories for the first time, you'll be prompted to verify the public key fingerprint. You can view those here:
 - https://rpmfusion.org/keys
 
+If you want applications from the RPM Fusion repositories to show up in GNOME Software, run:
+```bash
+sudo dnf groupupdate core
+```
+
+That should prompt for the install of two packages:
+- `rpmfusion-free-appstream-data`
+- `rpmfusion-nonfree-appstream-data`
+
 See these links for additional help:
 - https://rpmfusion.org/Configuration
 - https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
