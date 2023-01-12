@@ -10,7 +10,9 @@ sudo dnf autoremove
 
 Doing this pair of commands throughout your setup process could be a good idea. Be sure to do it at least once more at the very end.
 
-## Adding the RPM Fusion repositories
+## Adding software repositories
+
+### Adding the RPM Fusion repositories for `dnf`
 The RPM Fusion repositories contain some software that we'll need or want.
 
 VLC, for example, is in the *free* repository. While the properietary Nvidia drivers, Steam, and Discord come out of the *nonfree* repository.
@@ -32,7 +34,20 @@ See these links for additional help:
 - https://rpmfusion.org/Configuration
 - https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
 
-## Installing the properietary Nvidia drivers
+### Adding the Flathub repository for Flatpak
+To add and enable the Flathub repository for Flatpak, run:
+```bash
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-modify --enable flathub
+```
+
+Further help can be found here:
+- https://flatpak.org/setup/Fedora
+
+
+## Installing device drivers
+
+### Installing the properietary Nvidia drivers
 Install these packages via `dnf`:
 ```bash
 sudo dnf install akmod-nvidia
@@ -52,25 +67,9 @@ I would reboot again too, out of paranoia.
 Further help can be found here:
 - https://rpmfusion.org/Howto/NVIDIA
 
-## Installing Steam
-To install Steam, run:
-```bash
-sudo dnf install steam
-```
+## Installing other packages
 
-Alternatively, you could probably find it in *GNOME Software*.
-
-It's possible that `dnf` won't find this package. If that's the case, you may need to somehow tell `dnf` to look for 32-bit packages (the *i686* architecture).
-
-## Installing Discord
-To install Discord, run:
-```bash
-sudo dnf install discord
-```
-
-Alternatively, you could probably find it in *GNOME Software*.
-
-## Installing various staple programs
+### Installing various staple programs
 These are programs that I prefer to have around.
 
 To install them, run:
@@ -80,14 +79,14 @@ sudo dnf install vim htop lm_sensors neofetch gnome-tweaks plank
 
 *Plank* is a macOS-like dock. I always add it to the Startup Applications list in *GNOME Tweaks*.
 
-## Installing the DejaVu fonts pack
+### Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
 ```bash
 sudo dnf install dejavu-fonts-all
 fc-cache -v
 ```
 
-## Installing Google Chrome
+### Installing Google Chrome
 You'll need to enable the Google Chrome repository that Workstation Edition ships with. We can do that with `dnf config-manager`.
 
 To install Google Chrome, run:
@@ -97,7 +96,25 @@ sudo dnf makecache
 sudo dnf install google-chrome-stable
 ```
 
-## Installing VLC
+### Installing Steam
+To install Steam, run:
+```bash
+sudo dnf install steam
+```
+
+Alternatively, you could probably find it in *GNOME Software*.
+
+It's possible that `dnf` won't find this package. If that's the case, you may need to somehow tell `dnf` to look for 32-bit packages (the *i686* architecture).
+
+### Installing Discord
+To install Discord, run:
+```bash
+sudo dnf install discord
+```
+
+Alternatively, you could probably find it in *GNOME Software*.
+
+### Installing VLC
 This will be coming out of the RPM Fusion free repository.
 
 To install VLC, run:
@@ -110,17 +127,7 @@ It'll have quite a few dependencies, so that's why I've included it separately.
 Further help can be found here:
 - https://www.videolan.org/vlc/download-fedora.html
 
-## Adding the Flathub repository for Flatpak
-To add and enable the Flathub repository for Flatpak, run:
-```bash
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak remote-modify --enable flathub
-```
-
-Further help can be found here:
-- https://flatpak.org/setup/Fedora
-
-## Installing Spotify
+### Installing Spotify
 To install Spotify, run:
 ```bash
 sudo flatpak install flathub com.spotify.Client
@@ -129,7 +136,7 @@ sudo flatpak install flathub com.spotify.Client
 Further help can be found here:
 - https://flathub.org/apps/details/com.spotify.Client
 
-## Installing Signal
+### Installing Signal
 To install Signal, run:
 ```bash
 sudo flatpak install flathub org.signal.Signal
@@ -149,7 +156,7 @@ Further help can be found here:
 - https://hansdegoede.livejournal.com/19081.html
 
 ## Fixing the GNOME login screen being on the wrong monitor
-First, you'll need to login with Wayland. Be sure to do this after installing the properietary Nvidia drivers.
+First, you'll need to log in with Wayland. Be sure to do this after installing the properietary Nvidia drivers.
 
 Then arrange the monitors to your liking via *GNOME Settings*.
 
