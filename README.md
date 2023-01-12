@@ -161,6 +161,15 @@ It'll have quite a few dependencies, so that's why I've included it separately.
 Further help can be found here:
 - https://www.videolan.org/vlc/download-fedora.html
 
+### Installing the Dolphin Emulator
+To install the Dolphin Emulator for GameCube and Wii games, run:
+```bash
+sudo dnf install dolphin-emu
+```
+
+Further help can be found here:
+- https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin
+
 ### Installing Spotify
 To install Spotify, run:
 ```bash
