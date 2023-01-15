@@ -148,6 +148,15 @@ Alternatively, you could probably find it in *GNOME Software*.
 Just see this page for the most up to date way to install VS Code:
 - https://code.visualstudio.com/docs/setup/linux
 
+
+### Installing GIMP
+To install GIMP, run:
+```
+sudo dnf install gimp
+```
+
+It'll have quite a few dependencies, so that's why I've included it separately.
+
 ### Installing VLC
 This will be coming out of the RPM Fusion free repository.
 
