@@ -222,6 +222,19 @@ You can see this effect immediately by pressing `Ctrl`+`Alt`+`F1`.
 
 GNOME Display Manager will just ignore the file if anything is wrong with it. So, for every new monitor configuration, you'll need to do this again.
 
+## Increasing the number of old kernels to keep installed
+To increase the number of old kernels to keep installed, run:
+```bash
+sudo dnf config-manager --setopt=installonly_limit=4 --save
+```
+
+This will modify `/etc/dnf/dnf.conf`. To check that your changes took effect, run:
+```bash
+cat /etc/dnf/dnf.conf
+```
+
+By default, it would have been set to 3. I prefer to keep more than that around.
+
 ## Fixing a humming/hissing noise when no audio is playing
 Create a file in `/etc/modprobe.d/`:
 ```bash
