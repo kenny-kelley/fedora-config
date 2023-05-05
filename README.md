@@ -1,5 +1,5 @@
 # How to set up Fedora Linux
-These are notes taken while setting up my desktop's install of Fedora Linux 37 (Workstation Edition).
+These are notes taken while setting up my desktop's install of Fedora Linux 37 (Workstation Edition). These steps ought to work just fine on newer releases of Fedora.
 
 ## Updating software
 
