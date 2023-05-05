@@ -151,7 +151,7 @@ Just see this page for the most up to date way to install VS Code:
 
 ### Installing GIMP
 To install GIMP, run:
-```
+```bash
 sudo dnf install gimp
 ```
 
@@ -161,7 +161,7 @@ It'll have quite a few dependencies, so that's why I've included it separately.
 This will be coming out of the RPM Fusion free repository.
 
 To install VLC, run:
-```
+```bash
 sudo dnf install vlc
 ```
 
