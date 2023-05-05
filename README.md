@@ -104,7 +104,7 @@ These are programs that I prefer to have around.
 
 To install them, run:
 ```bash
-sudo dnf install vim htop lm_sensors neofetch gnome-tweaks plank
+sudo dnf install vim htop lm_sensors nvtop neofetch gnome-tweaks plank
 ```
 
 *Plank* is a macOS-like dock. I always add it to the Startup Applications list in *GNOME Tweaks*.
