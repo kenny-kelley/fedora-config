@@ -36,7 +36,7 @@ Further help can be found here:
 ### Adding the RPM Fusion repositories for `dnf`
 The RPM Fusion repositories contain some software that we'll need or want.
 
-VLC, for example, is in the *free* repository. While the properietary Nvidia drivers, Steam, and Discord come out of the *nonfree* repository.
+VLC, for example, is in the *free* repository. While the proprietary Nvidia drivers, Steam, and Discord come out of the *nonfree* repository.
 
 We can add the RPM Fusion free and nonfree repositories by installing these packages:
 ```bash
@@ -77,7 +77,7 @@ Further help can be found here:
 
 ## Installing device drivers
 
-### Installing the properietary Nvidia drivers
+### Installing the proprietary Nvidia drivers
 Install these packages via `dnf`:
 ```bash
 sudo dnf install akmod-nvidia
@@ -208,7 +208,7 @@ Further help can be found here:
 - https://hansdegoede.livejournal.com/19081.html
 
 ## Fixing the GNOME login screen being on the wrong monitor
-First, you'll need to log in with Wayland. Be sure to do this after installing the properietary Nvidia drivers.
+First, you'll need to log in with Wayland. Be sure to do this after installing the proprietary Nvidia drivers.
 
 Then arrange the monitors to your liking via *GNOME Settings*.
 
