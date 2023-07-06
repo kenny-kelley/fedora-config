@@ -236,3 +236,19 @@ cat /etc/dnf/dnf.conf
 ```
 
 By default, it would have been set to 3. I prefer to keep more than that around.
+
+## Automatically signing the Nvidia driver kernel modules so that Secure Boot can be enabled
+I am pretty sure that this is the only command that you need to run:
+```bash
+sudo mokutil --import /etc/pki/akmods/certs/public_key.der
+```
+
+That key should already exist on a fresh install of Fedora.
+
+It'll ask you to put in a password, which you'll need to put in after a reboot.
+
+Further help can be found here:
+- https://blog.monosoul.dev/2022/05/17/automatically-sign-nvidia-kernel-module-in-fedora-36/
+- https://gist.github.com/lijikun/22be09ec9b178e745758a29c7a147cc9
+- https://github.com/dell/dkms#secure-boot
+- https://download.nvidia.com/XFree86/Linux-x86/361.45.11/README/installdriver.html
