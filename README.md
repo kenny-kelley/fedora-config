@@ -252,3 +252,11 @@ Further help can be found here:
 - https://gist.github.com/lijikun/22be09ec9b178e745758a29c7a147cc9
 - https://github.com/dell/dkms#secure-boot
 - https://download.nvidia.com/XFree86/Linux-x86/361.45.11/README/installdriver.html
+
+## Getting `.mkv` and other video file thumbnails to work
+You should just have to install one package:
+```bash
+sudo dnf install ffmpegthumbnailer
+```
+
+If that doesn't do the trick on its own, consider deleting the contents of `~/.cache/thumbnails/`.
