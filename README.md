@@ -141,10 +141,13 @@ It's possible that `dnf` won't find this package. If that's the case, you may ne
 ### Installing Discord
 To install Discord, run:
 ```bash
-sudo dnf install discord
+sudo flatpak install flathub com.discordapp.Discord
 ```
 
 Alternatively, you could probably find it in *GNOME Software*.
+
+Further help can be found here:
+- https://flathub.org/apps/com.discordapp.Discord
 
 ### Installing Visual Studio Code
 Just see this page for the most up to date way to install VS Code:
