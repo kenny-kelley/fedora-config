@@ -36,7 +36,7 @@ Further help can be found here:
 ### Adding the RPM Fusion repositories for `dnf`
 The RPM Fusion repositories contain some software that we'll need or want.
 
-VLC, for example, is in the *free* repository. While the proprietary Nvidia drivers, Steam, and Discord come out of the *nonfree* repository.
+VLC, for example, is in the *free* repository. While the proprietary Nvidia drivers and Steam come out of the *nonfree* repository.
 
 We can add the RPM Fusion free and nonfree repositories by installing these packages:
 ```bash
