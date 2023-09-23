@@ -118,16 +118,6 @@ sudo dnf install dejavu-fonts-all
 fc-cache -v
 ```
 
-### Installing Google Chrome
-You'll need to enable the Google Chrome repository that Workstation Edition ships with. We can do that with `dnf config-manager`.
-
-To install Google Chrome, run:
-```bash
-sudo dnf config-manager --set-enabled google-chrome
-sudo dnf makecache
-sudo dnf install google-chrome-stable
-```
-
 ### Installing Steam
 To install Steam, run:
 ```bash
