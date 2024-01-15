@@ -106,10 +106,12 @@ These are programs that I prefer to have around.
 
 To install them, run:
 ```bash
-sudo dnf install vim htop lm_sensors btop nvtop neofetch gnome-tweaks plank
+sudo dnf install vim htop lm_sensors btop nvtop neofetch gnome-tweaks gnome-extensions-app gnome-shell-extension-dash-to-dock
 ```
 
-*Plank* is a macOS-like dock. I always add it to the Startup Applications list in *GNOME Tweaks*.
+*Dash to Dock* lets you use the dash of GNOME's overview mode as a proper dock. It can be enabled and managed via the *GNOME Extensions* application.
+
+I had previously used *Plank*, but that isn't going to work when I eventually switch to Wayland.
 
 ### Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
