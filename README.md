@@ -106,7 +106,16 @@ These are programs that I prefer to have around.
 
 To install them, run:
 ```bash
-sudo dnf install vim htop lm_sensors btop nvtop neofetch gnome-tweaks gnome-extensions-app gnome-shell-extension-dash-to-dock
+sudo dnf install \
+    vim \
+    htop \
+    lm_sensors \
+    btop \
+    nvtop \
+    neofetch \
+    gnome-tweaks \
+    gnome-extensions-app \
+    gnome-shell-extension-dash-to-dock
 ```
 
 *Dash to Dock* lets you use the dash of GNOME's overview mode as a proper dock. It can be enabled and managed via the *GNOME Extensions* application.
