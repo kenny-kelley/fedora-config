@@ -11,7 +11,7 @@ sudo dnf install libinput-utils
 
 This will let us run `libinput quirks`.
 
-Now, let's fine the device that's the touchpad:
+Now, let's find the device that's the touchpad:
 ```bash
 sudo libinput list-devices
 ```
@@ -60,7 +60,7 @@ kenny@GLaDOS-PC:~$ libinput quirks list --verbose /dev/input/event9 | grep "is f
 quirks debug: [Apple Touchpads USB] (50-system-apple.quirks) is full match
 ```
 
-Now that's that's confirmed, we can set some local override quirks.
+Now that that's confirmed, we can set some local override quirks.
 
 Make a directory at `/etc/libinput`:
 ```bash
