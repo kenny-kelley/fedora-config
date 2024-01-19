@@ -89,3 +89,25 @@ These were the main sources that helped me arrive at this solution:
 - https://www.sharpwriting.net/project/libinput-on-old-macbooks/
 - https://wayland.freedesktop.org/libinput/doc/latest/device-quirks.html
 - https://askubuntu.com/questions/1387482/ubuntu-on-2012-macbook-pro-pointer-stops-when-extra-pressure-is-applied-to-tou
+
+## Fixing the wireless drivers
+Out of the box, Wi-Fi and Bluetooth don't work.
+
+See this line by running `lspci`:
+```
+03:00.0 Network controller: Broadcom Inc. and subsidiaries BCM4331 802.11a/b/g/n (rev 02)
+```
+
+That's the thing we need drivers for.
+
+The `broadcom-wl` package comes out of the RPM Fusion nonfree repository. So be sure to have that added first.
+
+So do this:
+```bash
+sudo dnf install broadcom-wl
+sudo akmods
+```
+
+It may be a good idea to run `akmods` after every kernel update. Especially before shutting down.
+
+Now reboot. And then your Wi-Fi and Bluetooth ought to work.
