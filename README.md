@@ -187,6 +187,12 @@ To install Signal, run:
 sudo flatpak install flathub org.signal.Signal
 ```
 
+To make Signal properly respect a dark theme, run:
+```bash
+sudo flatpak install org.gtk.Gtk3theme.Adwaita-dark
+sudo flatpak override org.signal.Signal --env=GTK_THEME=Adwaita-dark
+```
+
 Further help can be found here:
 - https://flathub.org/apps/details/org.signal.Signal
 
