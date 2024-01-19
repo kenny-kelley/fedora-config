@@ -11,7 +11,7 @@ sudo dnf install gnome-themes-extra
 ```
 
 # Want maximize and minimize buttons?
-Go to `GNOME Tweaks->Window Titlebars->Maximize` and `GNOME Tweaks->Window Titlebars->Minimize`.
+Go to `GNOME Tweaks->Windows->Titlebar Buttons->Maximize` and `GNOME Tweaks->Windows->Titlebar Buttons->Minimize`.
 
 # Want `Alt+Tab` to switch windows instead of applications?
 Go to `GNOME Settings->Keyboard->Keyboard Shortcuts->View and Customize Shortcuts->Navigation->Switch windows`.
