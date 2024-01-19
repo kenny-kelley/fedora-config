@@ -5,6 +5,11 @@ This is great, but it doesn't actually affect some applications. I.e., those usi
 
 To have a dark theme applied to those, go to `GNOME Tweaks->Appearance->Legacy Applications`.
 
+On a more recent install (Fedora 39), I had to install a package to find `Adwaita-dark` in *GNOME Tweaks*:
+```bash
+sudo dnf install gnome-themes-extra
+```
+
 # Want maximize and minimize buttons?
 Go to `GNOME Tweaks->Window Titlebars->Maximize` and `GNOME Tweaks->Window Titlebars->Minimize`.
 
