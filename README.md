@@ -88,6 +88,7 @@ sudo dnf install \
     htop \
     lm_sensors \
     btop \
+    rocm-smi \
     nvtop \
     neofetch \
     gnome-tweaks \
@@ -98,6 +99,8 @@ sudo dnf install \
 *Dash to Dock* lets you use the dash of GNOME's overview mode as a proper dock. It can be enabled and managed via the *GNOME Extensions* application.
 
 I had previously used *Plank*, but that isn't going to work when I eventually switch to Wayland.
+
+`rocm-smi` is a library lets `btop` monitor my AMD GPU's usage.
 
 ### Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
