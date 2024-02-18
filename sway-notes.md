@@ -21,3 +21,11 @@ sudo install adwaita-qt6
 ```
 
 And then you'll need to set `QT_STYLE_OVERRIDE=adwaita-dark` somewhere (such as when calling `fuzzle`).
+
+## Something to do screenshots
+`@sway-desktop-environment` should include `slurp` and `grim`, but I wanted to get the screenshot piped to my clipboard. That's where `wl-copy` comes in.
+
+To get that program, install this package:
+```bash
+sudo dnf install wl-clipboard
+```
