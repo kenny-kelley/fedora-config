@@ -169,11 +169,12 @@ If that doesn't do the trick on its own, consider deleting the contents of `~/.c
 ### Installing the Dolphin Emulator
 To install the Dolphin Emulator for GameCube and Wii games, run:
 ```bash
-sudo dnf install dolphin-emu
+sudo flatpak install flathub org.DolphinEmu.dolphin-emu
 ```
 
 Further help can be found here:
 - https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin
+- https://flathub.org/apps/org.DolphinEmu.dolphin-emu
 
 ### Installing Spotify
 To install Spotify, run:
