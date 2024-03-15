@@ -100,7 +100,7 @@ sudo dnf install \
 
 I had previously used *Plank*, but that isn't going to work when I eventually switch to Wayland.
 
-`rocm-smi` is a library lets `btop` monitor my AMD GPU's usage.
+`rocm-smi` is a library that lets `btop` monitor my AMD GPU.
 
 ### Installing the DejaVu fonts pack
 You can install the DejaVu fonts pack (and refresh the font cache) like this:
