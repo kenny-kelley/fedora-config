@@ -11,10 +11,8 @@ sudo dnf autoremove
 ```
 
 ### Updating Flatpak applications and dependencies
-To update Flatpak applications and dependencies (for the system and the current user), run:
+To update Flatpak applications and dependencies, run:
 ```bash
-sudo flatpak update
-sudo flatpak uninstall --unused
 flatpak update
 flatpak uninstall --unused
 ```
@@ -122,7 +120,7 @@ It's possible that `dnf` won't find this package. If that's the case, you may ne
 ### Installing Discord
 To install Discord, run:
 ```bash
-sudo flatpak install flathub com.discordapp.Discord
+flatpak install flathub com.discordapp.Discord
 ```
 
 Alternatively, you could probably find it in *GNOME Software*.
@@ -169,7 +167,7 @@ If that doesn't do the trick on its own, consider deleting the contents of `~/.c
 ### Installing the Dolphin Emulator
 To install the Dolphin Emulator for GameCube and Wii games, run:
 ```bash
-sudo flatpak install flathub org.DolphinEmu.dolphin-emu
+flatpak install flathub org.DolphinEmu.dolphin-emu
 ```
 
 Further help can be found here:
@@ -179,7 +177,7 @@ Further help can be found here:
 ### Installing Spotify
 To install Spotify, run:
 ```bash
-sudo flatpak install flathub com.spotify.Client
+flatpak install flathub com.spotify.Client
 ```
 
 Further help can be found here:
@@ -188,12 +186,12 @@ Further help can be found here:
 ### Installing Signal
 To install Signal, run:
 ```bash
-sudo flatpak install flathub org.signal.Signal
+flatpak install flathub org.signal.Signal
 ```
 
 To make Signal properly respect a dark theme, run:
 ```bash
-sudo flatpak install org.gtk.Gtk3theme.Adwaita-dark
+flatpak install org.gtk.Gtk3theme.Adwaita-dark
 sudo flatpak override org.signal.Signal --env=GTK_THEME=Adwaita-dark
 ```
 
