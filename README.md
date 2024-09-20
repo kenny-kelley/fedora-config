@@ -91,7 +91,10 @@ sudo dnf install \
     neofetch \
     gnome-tweaks \
     gnome-extensions-app \
-    gnome-shell-extension-dash-to-dock
+    gnome-shell-extension-dash-to-dock \
+    fastfetch \
+    fzf \
+    stow
 ```
 
 *Dash to Dock* lets you use the dash of GNOME's overview mode as a proper dock. It can be enabled and managed via the *GNOME Extensions* application.
