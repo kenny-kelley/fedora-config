@@ -220,3 +220,14 @@ cat /etc/dnf/dnf.conf
 ```
 
 By default, it would have been set to 3. I prefer to keep more than that around.
+
+## Using RPM Fusion's `ffmpeg`
+Do this stuff:
+```bash
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf install @sound-and-video
+```
+
+See here:
+- https://rpmfusion.org/Howto/Multimedia
