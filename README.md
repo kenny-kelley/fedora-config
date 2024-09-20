@@ -208,21 +208,6 @@ Further help can be found here:
 - https://fedoraproject.org/wiki/Changes/HiddenGrubMenu
 - https://hansdegoede.livejournal.com/19081.html
 
-## Fixing the GNOME login screen being on the wrong monitor
-First, you'll need to log in with Wayland.
-
-Then arrange the monitors to your liking via *GNOME Settings*.
-
-Now, to fix the GNOME login screen being on the wrong monitor, run:
-```bash
-sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/
-sudo chown gdm:gdm /var/lib/gdm/.config/monitors.xml
-```
-
-You can see this effect immediately by pressing `Ctrl`+`Alt`+`F1`.
-
-GNOME Display Manager will just ignore the file if anything is wrong with it. So, for every new monitor configuration, you'll need to do this again.
-
 ## Increasing the number of old kernels to keep installed
 To increase the number of old kernels to keep installed, run:
 ```bash
