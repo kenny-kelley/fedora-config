@@ -94,7 +94,8 @@ sudo dnf install \
     gnome-shell-extension-dash-to-dock \
     fastfetch \
     fzf \
-    stow
+    stow \
+    pdfarranger
 ```
 
 *Dash to Dock* lets you use the dash of GNOME's overview mode as a proper dock. It can be enabled and managed via the *GNOME Extensions* application.
