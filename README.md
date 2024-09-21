@@ -24,7 +24,7 @@ fwupdmgr refresh --force
 fwupdmgr update
 ```
 
-It's worth noting that, while not all that many devices are really supported via `fwupd`, it's worth running every once and a while (especially on newer systems).
+It's worth noting that, while not all that many devices are necessarily supported via `fwupd`, it's worth running every once and a while (especially on newer systems).
 
 Further help can be found here:
 - https://wiki.archlinux.org/title/fwupd
