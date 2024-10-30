@@ -216,7 +216,7 @@ Further help can be found here:
 ## Increasing the number of old kernels to keep installed
 To increase the number of old kernels to keep installed, run:
 ```bash
-sudo dnf config-manager --setopt=installonly_limit=4 --save
+sudo dnf config-manager setopt installonly_limit=4
 ```
 
 This will modify `/etc/dnf/dnf.conf`. To check that your changes took effect, run:
